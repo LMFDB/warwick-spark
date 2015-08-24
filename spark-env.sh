@@ -15,6 +15,7 @@
 # - SPARK_PUBLIC_DNS, to set the public DNS name of the driver program
 # - SPARK_CLASSPATH, default classpath entries to append
 # - SPARK_LOCAL_DIRS, storage directories to use on this node for shuffle and RDD data
+SPARK_LOCAL_DIRS="/home/spark/tmp"
 # - MESOS_NATIVE_JAVA_LIBRARY, to point to your libmesos.so if you use Mesos
 
 # Options read in YARN client mode
@@ -33,11 +34,15 @@
 # - SPARK_MASTER_PORT / SPARK_MASTER_WEBUI_PORT, to use non-default ports for the master
 # - SPARK_MASTER_OPTS, to set config properties only for the master (e.g. "-Dx=y")
 # - SPARK_WORKER_CORES, to set the number of cores to use on this machine
+SPARK_WORKER_CORES=6
 # - SPARK_WORKER_MEMORY, to set how much total memory workers have to give executors (e.g. 1000m, 2g)
+SPARK_WORKER_MEMORY=10g
 # - SPARK_WORKER_PORT / SPARK_WORKER_WEBUI_PORT, to use non-default ports for the worker
 # - SPARK_WORKER_INSTANCES, to set the number of worker processes per node
+SPARK_WORKER_INSTANCES=4
 # - SPARK_WORKER_DIR, to set the working directory of worker processes
 # - SPARK_WORKER_OPTS, to set config properties only for the worker (e.g. "-Dx=y")
+SPARK_WORKER_OPTS="-Dspark.worker.cleanup.enabled=true -Dspark.worker.cleanup.appDataTtl=3600"
 # - SPARK_HISTORY_OPTS, to set config properties only for the history server (e.g. "-Dx=y")
 # - SPARK_SHUFFLE_OPTS, to set config properties only for the external shuffle service (e.g. "-Dx=y")
 # - SPARK_DAEMON_JAVA_OPTS, to set config properties for all daemons (e.g. "-Dx=y")
