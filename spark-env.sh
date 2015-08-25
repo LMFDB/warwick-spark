@@ -3,6 +3,8 @@
 # This file is sourced when running various Spark programs.
 # Copy it as spark-env.sh and edit that to configure Spark for your site.
 
+SPARK_HOME="/mnt/data/spark/spark"
+
 # Options read when launching programs locally with
 # ./bin/run-example or ./bin/spark-submit
 # - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files
@@ -32,7 +34,10 @@ SPARK_LOCAL_DIRS="/home/spark/tmp"
 
 # Options for the daemons used in the standalone deploy mode
 # - SPARK_MASTER_IP, to bind the master to a different IP address or hostname
-SPARK_MASTER_IP="192.168.13.2" # lmfdb-ib
+# SPARK_MASTER_IP="lmfdb-ib"
+#SPARK_MASTER_IP="lmfdb"
+# the eth0 address of lmfdb
+SPARK_MASTER_IP="137.205.56.254"
 # - SPARK_MASTER_PORT / SPARK_MASTER_WEBUI_PORT, to use non-default ports for the master
 # - SPARK_MASTER_OPTS, to set config properties only for the master (e.g. "-Dx=y")
 # - SPARK_WORKER_CORES, to set the number of cores to use on this machine
