@@ -1,4 +1,5 @@
 # A Spark Worker will be started on each of the machines listed below.
 atkin-ib
 lehner-ib
+lmfdb-ib
 

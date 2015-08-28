@@ -41,12 +41,12 @@ SPARK_MASTER_IP="137.205.56.254"
 # - SPARK_MASTER_PORT / SPARK_MASTER_WEBUI_PORT, to use non-default ports for the master
 # - SPARK_MASTER_OPTS, to set config properties only for the master (e.g. "-Dx=y")
 # - SPARK_WORKER_CORES, to set the number of cores to use on this machine
-SPARK_WORKER_CORES=6
+SPARK_WORKER_CORES=20
 # - SPARK_WORKER_MEMORY, to set how much total memory workers have to give executors (e.g. 1000m, 2g)
-SPARK_WORKER_MEMORY=10g
+SPARK_WORKER_MEMORY=40g
 # - SPARK_WORKER_PORT / SPARK_WORKER_WEBUI_PORT, to use non-default ports for the worker
 # - SPARK_WORKER_INSTANCES, to set the number of worker processes per node
-SPARK_WORKER_INSTANCES=4
+SPARK_WORKER_INSTANCES=1
 # - SPARK_WORKER_DIR, to set the working directory of worker processes
 # - SPARK_WORKER_OPTS, to set config properties only for the worker (e.g. "-Dx=y")
 SPARK_WORKER_OPTS="-Dspark.worker.cleanup.enabled=true -Dspark.worker.cleanup.appDataTtl=3600"
@@ -61,3 +61,8 @@ SPARK_WORKER_OPTS="-Dspark.worker.cleanup.enabled=true -Dspark.worker.cleanup.ap
 # - SPARK_PID_DIR       Where the pid file is stored. (Default: /tmp)
 # - SPARK_IDENT_STRING  A string representing this instance of spark. (Default: $USER)
 # - SPARK_NICENESS      The scheduling priority for daemons. (Default: 0)
+
+PYSPARK_PYTHON=python
+PYSPARK_DRIVER_PYTHON=ipython
+PYSPARK_DRIVER_PYTHON_OPTS="notebook --no-browser --profile=pyspark"
+
