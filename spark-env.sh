@@ -68,5 +68,5 @@ SPARK_WORKER_OPTS="-Dspark.worker.cleanup.enabled=true -Dspark.worker.cleanup.ap
 
 PYSPARK_PYTHON=python
 PYSPARK_DRIVER_PYTHON=ipython
-PYSPARK_DRIVER_PYTHON_OPTS="notebook --no-browser --profile=pyspark"
+PYSPARK_DRIVER_PYTHON_OPTS="notebook --no-browser"
 
