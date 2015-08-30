@@ -5,6 +5,10 @@
 
 SPARK_HOME="/mnt/data/spark/spark"
 
+# for miniconda
+PATH="/mnt/data/spark/miniconda/bin:$PATH"
+LMFDB_DUMPS="/mnt/data/lmfdbdata/dump/latest"
+
 # Options read when launching programs locally with
 # ./bin/run-example or ./bin/spark-submit
 # - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files
